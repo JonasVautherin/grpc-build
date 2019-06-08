@@ -38,7 +38,8 @@ endforeach()
 
 ExternalProject_add(
     grpc
-    URL https://github.com/grpc/grpc/archive/v1.21.0.zip
+    #URL https://github.com/grpc/grpc/archive/v1.21.0.zip
+    URL https://github.com/dronecore/grpc/archive/fix-cmake_crosscompiling.zip
     PREFIX grpc
     CMAKE_ARGS "${CMAKE_ARGS}"
     )
