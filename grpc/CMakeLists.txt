@@ -37,7 +37,8 @@ endforeach()
 
 ExternalProject_add(
     grpc
-    URL https://github.com/grpc/grpc/archive/v1.21.0.zip
+    URL https://github.com/grpc/grpc/archive/v1.20.0.zip
     PREFIX grpc
+    PATCH_COMMAND patch < ${PROJECT_SOURCE_DIR}/grpc_ios.patch
     CMAKE_ARGS "${CMAKE_ARGS}"
     )
